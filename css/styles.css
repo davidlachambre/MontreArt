@@ -1,0 +1,2713 @@
+@charset "utf-8";
+
+/*https://css-tricks.com/snippets/php/randomize-background-image/*/
+
+
+/*========================================  CSS RESET ====================================================*/
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/*========================================  fin DU CSS RESET ====================================================*/
+
+
+/*========================================  STYLES GENERAUX ====================================================*/
+
+
+/*============================COULEURS:
+rouge: #B32A42;
+rouge fonce: #70212F;
+rose: #F05570;
+bleu fonce: #1781B2;
+bleu moyen: #659CEF;
+jaune: #F8F274;
+================================FIN COULEURS*/
+
+@viewport {
+    zoom: 1.0;
+    width: extend-to-zoom;
+}
+
+@-ms-viewport {
+    width: extend-to-zoom;
+    zoom: 1.0;
+}
+
+html {
+    background-color: #70212F;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    max-width: 980px;
+}
+
+main {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 2em;
+    color: #70212F;
+    margin: 30px 10px 20px 10px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.6em;
+    color: #70212F;
+    margin: 60px 10px 30px 10px;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #70212F;
+    font-size: 1.2em;
+    margin-top: 1em;
+}
+
+h4 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #70212F;
+    font-size: 1em;
+    margin-top: 1em;
+}
+
+h5 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #70212F;
+    font-size: .9em;
+}
+
+a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #000000;
+    text-decoration: none;
+}
+
+p {
+    margin-top: 10px;
+}
+
+footer {
+    background: #B32A42;
+    width: 100%;
+    min-height: 75px;
+    position: relative;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .8em;
+    letter-spacing: .6px;
+    line-height: 1.6em;
+    color: #ffffff;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.global {
+    background-color: #ffffff;
+}
+
+.textStandard {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+    line-height: 1.5em;
+    letter-spacing: .9px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+.noIndent {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    line-height: 1.4em;
+    letter-spacing: .9px;
+    font-weight: 500;
+    text-indent: 0;
+    text-align: center;
+    
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+
+/*div bidon qui reste en dessous du nav fixe*/
+
+.dummy {
+    height: 100px;
+}
+
+.section1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.section1 img {
+    width: 98%;
+    margin: 0 2%;
+}
+
+.section2 {
+    height: 300px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.oeuvreVedette {
+    width: 100%;
+    margin-bottom: 90px;
+}
+
+.oeuvreVedette img {
+    width: 100%;
+}
+
+.section4 {
+    height: auto;
+    width: 100%;
+}
+
+.pubAccueil {
+    height: auto;
+    width: 100%;
+}
+
+.pubAccueil img {
+    width: 80%;
+    height: auto;
+    margin-left: 40px;
+    margin-right: 15px;
+}
+
+.anchor {
+    float: right;
+    clear: both;
+    position: fixed;
+    bottom: 62px;
+    right: 10px;
+}
+
+.anchor img {
+    width: 40px;
+    opacity: .5;
+    z-index: 3;
+}
+
+.reseauxsociaux {
+    float: right;
+    width: 150px;
+    margin-right: 10px;
+    margin-top: 5px;
+}
+
+.reseauxsociaux img {
+    width: 40px;
+    height: auto;
+    margin: 5px;
+    margin-top: 18px;
+}
+
+.sliderOeuvre {
+    width: 100%;
+    height: auto;
+}
+
+.boutonMoyenne {
+    width: auto;
+    text-align: center;
+    background-color: #659CEF;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 30px;
+    border: none;
+}
+
+.infosOeuvre {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+    border: none;
+    
+}
+
+.infosOeuvre .boutonMoyenne {
+    margin-top: 20px;
+}
+
+.infosOeuvre p {
+    margin-top: 6px;
+    margin-bottom: 20px;
+    color: #2a2a2a;
+}
+
+.rating {
+    width: 100%;
+    height: 30px;
+}
+
+.description {
+    width: 100%;
+    height: 200px;
+    display: block;
+    padding-left: 10px;
+}
+
+.sectionCommentaires {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 10px;
+}
+
+.sectionCommentaires .thumbnail {
+    display: inline-block;
+    margin: 10px;
+    float: left;
+    clear: left;
+}
+
+.sectionCommentaires h4 {
+    float: left;
+    clear: none;
+}
+
+.sectionCommentaires p {
+    margin: 20px 10px 30px 10px;
+}
+
+.sectionCommentaires .boutonMoyenne {
+    margin: 20px 10px;
+}
+
+.unCommentaire {
+    width: 100%;
+    margin-top: 20px;
+    border-bottom: solid 2px #d6d6d6;
+    text-align: center;
+}
+
+.aside1 {
+    width: 100%;
+    height: 200px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.aside2 {
+    width: 100%;
+    height: 200px;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+.thumbnail {
+    width: 50px;
+    height: 50px;
+}
+
+.pourEnSavoirPlus {
+    margin-top: 50px;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #659CEF;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.pourEnSavoirPlus:hover {
+    background-color: #70212F;
+}
+
+.pourEnSavoirPlusProfil {
+    margin-top: 50px;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #659CEF;
+    border-radius: 8px;
+    font-size: 12px;
+}
+
+.pourEnSavoirPlusProfil:hover {
+    background-color: #70212F;
+}
+
+#sponsorsTrajet {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    border: 2px solid #47ce51;
+}
+
+.distanceMarqueur {
+    font-size: 1.1em;
+    color: #70212F;
+    width: 100%;
+    background-color: #B32A42;
+    color: white;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#directions-panel {
+    display: inline-block;
+    margin: 30px 10px;
+}
+
+#directions-panel h4 {
+    display: inline;
+    font-size: 1em;
+    line-height: 1.4em;
+    color: #70212F;
+    margin: 10px 0 5px 0;
+}
+
+#oeuvreNonTrouveeP {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.h4InfosOeuvre {
+    color: azure;
+}
+
+#h3CommentaireTitre {
+    text-align: center;
+}
+
+#aucunCommP {
+    text-align: center;
+}
+
+#titreOeuvreVedette {
+    text-align: center;
+}
+
+
+/*------------- PAGE GESTION -----------------------*/
+
+.boutonHover:active {
+    filter: brightness(125%);
+}
+
+.boutonHover:hover {
+    /*Anim mouse over des boutons de la page gestion*/
+    animation-name: hoverBouton;
+    animation-duration: .3s;
+}
+
+@keyframes hoverBouton {
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.boutonSoumission {
+    text-align: left;
+}
+
+.premiereColonne {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+
+.deuxiemeColonne {
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.troisiemmeColonne {
+    display: block;
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
+
+.listeCommentaires {
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.listeOeuvres {
+    display: block;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.rechercheResultTitre {
+    margin-top: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 20px;
+}
+
+.containerLiensGestion {
+    text-align: center;
+}
+
+.boutonsLiens {
+    width: 80%;
+    display: inline-block;
+    background: #B32A42;
+    border-radius: 8px;
+    margin: 0 0 20px 0;
+    font-weight: bold;
+}
+
+.lienOeuvreProfil {
+    color: #659CEF;
+    font-weight: bold;
+}
+
+.lienOeuvreProfil:hover {
+    color: #70212F;
+}
+
+.infoResult {
+    margin-top: 0;
+    font-size: 20px;
+}
+
+.selectGestion {
+    margin-top: 20px;
+}
+
+.televersionTexteGestion {
+    text-align: center;
+}
+
+.msgUser {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.titresFormGestion {
+    margin-top: 100px;
+}
+
+.textAreaGestion {
+    width: 69%;
+    height: 100px;
+}
+
+.MAJgestion {
+    text-align: center;
+    display: block;
+}
+
+#premierTeleversionTexte {
+    margin-top: 80px;
+}
+
+#accordeon h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#accordeon div {
+    width: 92%;
+    margin: 0 auto;
+}
+
+#accordeon a {
+    margin-bottom: 10px;
+    display: block;
+    background-color: #e2e2e2;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#accordeon span {
+    float: right;
+}
+
+#formRevisionPhotos {
+    display: none;
+    max-width: 600px;
+    padding: 10px 50px;
+    border: 2px solid #F8F274;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+#formRevisionPhotos img {
+    width: 50%;
+    margin-left: 20%;
+}
+
+#dateMisAJour {
+    position: relative;
+    top: 200px;
+}
+
+#results {
+    background-color: cornflowerblue;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#formRevisionPhotos {
+    display: none;
+    max-width: 600px;
+    padding: 10px 50px;
+    border: 2px solid #F8F274;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+#modifInfosProfil {
+    margin-top: 20px;
+}
+
+#misAJour {
+    margin-top: 30px;
+}
+
+#boutonTitreModif,
+#boutonAdresseModif,
+#boutonDescriptionFrModif,
+#boutonDescriptionEnModif,
+#boutonArrondissementModif,
+#boutonCategorieModif,
+#boutonCommentaireModif,
+#boutonLangueCommentaireModif,
+#boutonArtisteModif,
+#boutonCancelModifAdresse,
+#boutonCancelModifTitre,
+#boutonCancelModifDescriptionFR,
+#boutonCancelModifDescriptionEN,
+#boutonCancelModifArrondissement,
+#boutonCancelModifCategorie,
+#boutonCancelModifCommentaire,
+#boutonCancelModifLangueCommentaire,
+#boutonCancelModifArtiste {
+    padding: 0;
+    margin: 0 0 0 5px;
+    width: 29px;
+    height: 26px;
+    font-size: 16px;
+}
+
+#boutonCancelModifAdresse,
+#boutonCancelModifTitre,
+#boutonCancelModifDescriptionFR,
+#boutonCancelModifDescriptionEN,
+#boutonCancelModifArrondissement,
+#boutonCancelModifCategorie,
+#boutonCancelModifCommentaire,
+#boutonCancelModifLangueCommentaire,
+#boutonCancelModifArtiste {
+    background-color: #B32A42;
+}
+
+#titreModifSoumission,
+#adresseModifSoumission,
+#descriptionFrModifSoumission,
+#descriptionEnModifSoumission,
+#arrondissementModifSoumission,
+#categorieModifSoumission,
+#commentaireModifSoumission,
+#pArtisteModifSoumission,
+#nArtisteModifSoumission {
+    padding: 0 0 0 5px;
+    margin: 0;
+    height: 24px;
+    width: 40%;
+}
+
+#selectLangueCommentaireModif {
+    padding: 0 0 0 5px;
+    margin: 0;
+    height: 24px;
+    width: 10%;
+}
+
+#commentaireModifSoumission {
+    height: 100px;
+    width: 100%;
+}
+
+
+/*========NAV PRINCIPALE=====*/
+
+nav ul,
+nav li,
+nav a {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav {
+    display: block;
+    width: 100%;
+    background-color: #ffffff;
+    border-top: #70212F solid 4px;
+    border-bottom: #F8F274 solid 4px;
+    position: fixed;
+    top: 49px;
+    z-index: 2;
+}
+
+nav a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: .7em;
+    color: white;
+    text-decoration: none;
+    padding: .2em .3em;
+    line-height: 36px;
+    background-color: #659CEF;
+    border-radius: 5px;
+}
+
+nav a:active {
+    color: #b95364;
+}
+
+/*
+nav a:first-child {
+    margin-left: 9%;
+}
+*/
+
+nav a:hover {
+    background-color: #70212F;
+    color: white;
+}
+
+.ici {
+    /*--cette class est pour marquer la page actuelle dans le nav--*/
+    font-weight: 600;
+    background: #70212F;
+}
+
+
+/*====fin=NAV PRINCIPALE=====*/
+
+
+/*--------------------------STYLES FORMULAIRES -------------------------*/
+
+input {
+    width: 65%;
+}
+
+select {
+    width: 79%;
+}
+
+input,
+select {
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Source Sans Pro', sans-serif;
+    border-radius: 5px;
+}
+
+textarea {
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+select:focus,
+textarea,
+textarea:focus {
+    border-radius: 5px;
+}
+
+.inputLogin {
+    margin: 20px auto 0 auto;
+}
+
+#erreurLogin {
+    display: block;
+    margin: 10px auto 0 auto;
+}
+
+.msgAccesNonAuthorise {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 60px 0 30px 0;
+}
+
+.boutonAccepter,
+.boutonRefuser {
+    width: 100px;
+    text-align: center;
+    background-color: #659CEF;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 30px;
+    border: none;
+}
+
+.boutonRefuser {
+    float: right;
+    background: #B32A42;
+    margin-right: 20%;
+}
+
+.boutonAccepter {
+    margin-bottom: 20px;
+    margin-left: 20%;
+}
+
+.submit {
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+    background-color: #659CEF;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px 0;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 30px 0;
+}
+
+.form_ajout {
+    padding: 20px;
+}
+
+.form_ajout h3 {
+    margin-left: 40px;
+}
+
+.form_ajout ul {
+    margin-left: 60px;
+    margin-top: 1.6em;
+}
+
+.form_ajout li {
+    list-style: circle;
+    line-height: 1.6em;
+}
+
+#div_bgform,
+#bgPanneauApprobation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(90, 89, 89, 0.73);
+    overflow: auto;
+    z-index: 7;
+    display: none;
+}
+
+#fermer {
+    position: absolute;
+    right: -8px;
+    top: -8px;
+    width: 30px;
+    height: 30px;
+    background-color: #70212F;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 16px;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+#div_form,
+#panneauApprobation {
+    position: fixed;
+    font-family: 'Source Sans Pro', sans-serif;
+    z-index: 8;
+    display: none;
+    margin: 0 auto;
+}
+
+#div_form h2,
+#panneauApprobation h2 {
+    color: #70212F;
+    padding: 20px 35px;
+    margin: -10px -50px;
+}
+
+#panneauApprobation h2 {
+    text-align: center;
+}
+
+#panneauApprobation p {
+    font-size: 1.2em;
+    line-height: 1.4em;
+}
+
+#formLogin,
+#form_profil,
+#divPanneauApprobation {
+    padding: 10px 50px;
+    border: 2px solid #F8F274;
+    border-radius: 10px;
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+#formLogin,
+#form_profil {
+    text-align: center;
+}
+
+#formLogin h2 {
+    text-align: center;
+}
+
+#msgErreurApprobation {
+    color: red;
+}
+
+#divPanneauApprobation img {
+    width: 500px;
+}
+
+#form_itineraire,
+#contribuer_oeuvre {
+    padding: 10px 50px 30px 60px;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+    text-align: center;
+}
+
+#form_itineraire input[type="button"] {
+    float: right;
+    width: 100px;
+}
+
+#formContribuerPhoto h3 {
+    margin-left: 3%;
+    color: #b32a42;
+}
+
+#formContribuerPhoto h4 {
+    margin-left: 60px;
+    color: #000000;
+    text-align: center;
+    line-height: 1.6em;
+}
+
+#formPhotoUnique h4 {
+    text-align: center;
+}
+
+.infosOeuvres p {
+    color: #540e1b;
+}
+
+.infosOeuvres h4 {
+    color: #540e1b;
+}
+
+
+/*--------------------------FIN STYLES FORMULAIRES -------------------------*/
+
+div.stars {
+    width: 270px;
+    display: inline-block;
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+input.star {
+    display: none;
+}
+
+label.star {
+    float: right;
+    padding: 10px;
+    font-size: 36px;
+    color: #444;
+    transition: all .2s;
+}
+
+input.star:checked ~ label.star:before {
+    content: '\f005';
+    color: #FD4;
+    transition: all .25s;
+}
+
+input.star-5:checked ~ label.star:before {
+    color: #FE7;
+    text-shadow: 0 0 20px #952;
+}
+
+input.star-1:checked ~ label.star:before {
+    color: #F62;
+}
+
+label.star:hover {
+    transform: rotate(-15deg) scale(1.3);
+}
+
+label.star:before {
+    content: '\f006';
+    font-family: FontAwesome;
+}
+
+/*========================================  FIN DU STYLES GENERAUX ====================================================*/
+
+
+/*========================================  STYLES POUR MOBILE ========================================================*/
+
+
+
+header {
+    position: fixed;
+    z-index: 3;
+    background-color: #FFFFFF;
+    width: 100%;
+    height: 49px;
+}
+
+nav a {
+    display: none;
+}
+
+nav {
+    background-color: #659CEF;
+    display: none;
+}
+
+.erreur {
+    color: red;
+    margin-left: 30px;
+    display: block;
+    font-weight: bold;
+}
+
+.lienPageMembre {
+    float: left;
+    display: block;
+    width: 80px;
+    background-color: #ffffff;
+    border: 2px solid #F8F274;
+    margin-left: 40px;
+    margin-top: 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}
+
+.lienPageMembre:hover {
+    background-color: #F8F274;
+    border: 2px solid #70212F;
+}
+
+.reseauxsociaux img {
+    width: 30px;
+    margin-top: 24px;
+}
+
+.titresPageOeuvre {
+    text-align: center;
+}
+
+.infosOeuvre {
+    text-align: center;
+    height: auto;
+    padding-bottom: 10px;
+}
+
+.ratingUtilisateur {
+    width: 30%;
+    display: inline-block;
+    margin-top: 40px;
+}
+
+.ratingOeuvre {
+    text-align: center;
+    display: inline-block;
+}
+
+.ratingOeuvre img {
+    margin-top: 10px;
+    width: 20%;
+    display: inline-block;
+}
+
+.borderMobile {
+    border-bottom: 2px solid rgba(179, 42, 66, 0.65);
+    border-bottom-width: 15px;
+    border-bottom-style: solid;
+    border-bottom-color: #70212F;
+    margin-top: 40px;
+    
+}
+
+.inputPageAdmin {
+    margin-left: 30px;
+}
+
+.boutonRecherche {
+    display: none;
+}
+
+.inputDevMembre {
+    margin-left: 30px;
+}
+
+#boutonDirection {
+    display: none;
+}
+
+#logo {
+    display: none;
+}
+
+#titre {
+    position: relative;
+    top: -50px;
+    left: 70px;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #70212F;
+    font-size: 1.4em;
+    z-index: 4;
+}
+
+#loupe {
+    width: 15%;
+    max-width: 36px;
+    max-height: 36px;
+}
+
+#submitRecherche {
+    text-align: center;
+    width: 100%;
+}
+
+#navMobile {
+    font-size: 1.6em;
+    background-color: #659CEF;
+    height: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#navMobile a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: #659CEF;
+    padding: 12px 5px;
+    border-top: 2px solid #ffffff;
+}
+
+#navMobile a:hover {
+    background-color: #70212F;
+}
+
+#navMobile a:first-child {
+    margin-top: 8px;
+}
+
+#texteAccueil {
+    text-align: justify;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#aProposMontreart {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 1.2em;
+}
+
+#form_itineraire input[type="button"] {
+    float: none;
+    margin-left: 29%;
+}
+
+#navBoutonMobile {
+    width: 30px;
+    margin-top: 10px;
+    margin-left: 7px;
+}
+
+#lionDesktop {
+    display: none;
+}
+
+#lionMobile {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+#formPhotoUnique input[type="file"] {
+    width: 250px;
+    text-align: center;
+    font-size: 13px;
+    margin-left: 12%;
+
+}
+
+#formPhotoUnique h4 {
+    margin-top: 5%;
+}
+
+#aucuneOeuvre {
+    margin-left: 30px;
+    margin-top: 30px;
+}
+
+#descriptionTitreOeuvre {
+    text-align: center;
+    color: azure;
+}
+
+#texteDescriptionOeuvre {
+    color: #2a2a2a;
+    text-align: center;
+}
+
+#depart {
+    width: 73%;
+}
+
+#fin {
+    width: 245px;
+}
+
+.inputGestion,
+.selectGestion {
+    margin-left: 60px;
+    margin-right: 30px;
+}
+
+.fileToUploadGestion {
+    margin-left: 60px;
+    width: 63%;
+}
+
+.boutonsGestion {
+    margin-left: 33%;
+}
+
+#btnAjoutOeuvre {
+    margin-left: 38%;
+}
+
+#btnSupOeuvre {
+    margin-left: 36%;
+}
+
+#btnModCat {
+    margin-left: 37%;
+}
+
+#btnAjoutCat {
+    margin-left: 38%;
+}
+
+#btnSupCat {
+    margin-left: 36%;
+}
+
+#descriptionSoumission {
+    width: 103%;
+}
+
+.descriptionAjout {
+    width: 69%;
+}
+
+.descriptionAjoutSoumission {
+    width: 69%;
+    height: 50px;
+}
+
+.inputSoumission {
+    margin-left: 15%;
+}
+
+.selectSoumission {
+    margin-left: 15%;
+    width: 70%;
+}
+
+.televersionTexteSoumission {
+    text-align: center;
+}
+
+.fileToUploadSoumission {
+    margin-left: 15%;
+}
+
+.noIndent {
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+#backgroundOeuvreHead {
+    background-color: rgba(179, 42, 66, 0.84);
+    height: auto;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+}
+
+#commentaireAjout {
+    width: 290px;
+    height: 150px;
+}
+
+.texteCommP {
+    margin: 10px auto 30px auto;
+}
+
+div.stars {
+    margin-left: 11%;
+}
+
+/*======================================== Style recherche mobile ====================================================*/
+
+.boutonRechercheMobile {
+    background: #B32A42;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    border-bottom: solid 2px #70212F;
+    display: block;
+}
+
+.iconeRechercheMobile {
+    position: absolute;
+    left: 50%;
+    top: 5px;
+    transform: translate(-50%, 0);
+    height: 40px;
+    display: block;
+    z-index: 6;
+}
+
+.flecheRechercheMobile {
+    position: absolute;
+    background: #B32A42;
+    width: 20px;
+    height: 20px;
+    left: 50%;
+    top: 39px;
+    transform: translate(-50%, 0) rotate(315deg);
+    border-bottom-left-radius: 5px;
+    border-left: solid 2px #70212F;
+    border-bottom: solid 2px #70212F;
+    z-index: 5;
+}
+
+.barreRechercheContenuMobile {
+    position: fixed;
+    display: none;
+    width: 100%;
+    background: #70212F;
+    z-index: 5;
+    text-align: center;
+}
+
+.barreRechercheContenuMobile input[type="submit"] {
+    background-color: #F5F077;
+}
+
+.barreRechercheContenuMobile input[type="text"] {
+    width: 90.5%;
+}
+
+.barreRechercheContenuMobile input {
+    height: 40px;
+    width: 92%;
+    font-size: 1.4em;
+    padding: 0;
+    margin: 0 auto 20px auto;
+}
+
+.barreRechercheContenuMobile select:first-child {
+    margin-top: 20px;
+}
+
+.barreRechercheContenuMobile div select:first-child {
+    margin-top: 0;
+}
+
+.barreRechercheContenuMobile optgroup {
+    font-size: 1.1em;
+}
+
+.barreRechercheContenuMobile select {
+    height: 40px;
+    width: 92%;
+    font-size: 1.5em;
+    padding: 0;
+    margin: 0 auto 20px auto;
+    text-align: center;
+}
+
+.barreRechercheContenu {
+    display: none;
+}
+
+.resultatsRecherche {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+#results {
+    width: 92%;
+    border: 1px solid #c0c0c0;
+    display: none;
+    text-align: center;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#results a {
+    color: white;
+}
+
+#results .item {
+    padding: 6px;
+    font-size: 18px;
+    border-bottom: 1px solid white;
+}
+
+#results .item:last-child {
+    border-bottom: 0px;
+    padding-bottom: 4px;
+}
+
+#results .item:hover {
+    background-color: #70212F;
+    cursor: pointer;
+}
+
+#resultsMobile {
+    width: 100%;
+    border: 1px solid #c0c0c0;
+    display: none;
+    text-align: center;
+    margin: auto;
+    background: #659CEF;
+}
+
+#resultsMobile a {
+    color: white;
+}
+
+#resultsMobile .itemMobile {
+    padding: 10px;
+    font-size: 1.4em;
+    border-bottom: 2px solid white;
+}
+
+#resultsMobile .itemMobile:last-child {
+    border-bottom: 0px;
+    padding-bottom: 10px;
+}
+
+#resultsMobile .itemMobile:hover {
+    background-color: #70212F;
+    cursor: pointer;
+}
+
+#map {
+    height: 300px !important;
+    margin: 0 auto;
+    border-bottom: solid 4px #F8F274;
+    top: 20px;
+    order: 1;
+    top: 0px;
+}
+
+#texteAccueilTablette {
+    display: none;
+}
+
+#aProposMontreart {
+    display: none;
+}
+
+#logoMobile {
+    display: block;
+    width: 30%;
+    padding-top: 50px;
+    margin: 0 auto;
+}
+
+#promoMobile {
+    margin-bottom: 30px;
+}
+
+#directions-panel {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.selectGestion {
+    width: 70%;
+}
+
+#boutonAjouterSoumission {
+    margin-left: 40%;
+}
+
+#btnSoumettrePhoto {
+    margin-left: 35%;
+}
+
+div.stars {
+    margin-left: 11%;
+}
+
+#boutonAjouterCom {
+    margin-left: 21%;
+}
+
+#promoDesktop {
+    display: none;
+}
+
+.infosOeuvre {
+    width: 100%;   
+}
+
+/*------------ Classes générés dynamiquement sur chaque résultat de recherche----------------*/
+    
+    .fieldsetRecherche { 
+    display: block;
+    width: 100%;
+    border-top: 2px solid #70212F;
+    border-bottom: 2px solid #70212F;
+    padding-bottom: 3%;
+    padding-top: 3%;
+    margin-top: 8.5%;
+    }
+    
+    .fieldsetRecherche img {
+    width: 94%;
+    }
+/*------------ Fin des classes générés dynamiquement sur chaque résultat de recherche----------------*/
+    .profileUser {
+  text-align: center;
+
+    }
+
+    .profileUser img{
+       max-width: 200px;
+    height: auto;
+    }
+.nomGooglemap {
+  min-width: 40px !important;
+  min-height: 30px !important;
+}
+
+/*======================================== FIN DES STYLES POUR MOBILE ====================================================*/
+
+
+/*========================================  STYLES POUR IPHONE 5 =======================================================*/
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px)
+and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 40/71) and (orientation:portrait)
+{
+
+    /*----Page Trajet-----*/    
+
+    #fin {
+        width: 180px;
+    }
+
+    /*----Page Trajet-----*/ 
+
+    #form_itineraire input[type="button"] {
+        margin-left: 24%;
+    }
+
+    #boutonAjouterSoumission {
+        margin-left: 37%;
+    }
+
+
+    /*----Page gestion-----*/
+
+    .inputGestion, .selectGestion {
+        margin-left: 45px;
+        margin-right: 30px;
+    }
+
+    .fileToUploadGestion {
+        margin-left: 46px;
+    }
+
+    #btnAjoutOeuvre {
+        margin-left: 36%;
+    }
+
+    #btnSupOeuvre {
+        margin-left: 31%;
+    }
+
+    #btnSupCat {
+        margin-left: 31%;
+    }
+
+    /*-----Page oeuvre------*/
+
+    #formPhotoUnique input[type="file"] {
+        width: 240px;
+        text-align: center;
+        font-size: 13px;
+        margin-left: 30px;
+    }
+
+    #commentaireAjout {
+        width: 257px;
+    }
+
+    div.stars {
+        margin-left: 9%;
+    }
+
+    #boutonAjouterCom {
+        margin-left: 16%;
+    }
+
+    .infosOeuvre {
+        width: 97%;   
+    }    
+} 
+
+    
+
+
+
+/*======================================== FIN DES STYLES POUR IPHONE 5 ==================================================*/
+
+
+
+/*========================================  STYLES POUR TABLETTE 480 px ====================================================*/
+
+@media (min-width: 480px) {
+    header {
+        height: 57px;
+    }
+    .lienPageMembre {
+        float: left;
+        display: block;
+        width: 140px;
+        height: 40px;
+        margin-left: 40px;
+        margin-top: 18px;
+        font-size: 1.1em;
+    }
+    .global {
+        padding-bottom: 30px;
+    }
+    nav {
+        display: block;
+        width: 100%;
+        background-color: #ffffff;
+        border-top: #70212F solid 4px;
+        border-bottom: #F8F274 solid 4px;
+        position: fixed;
+        top: 57px;
+        z-index: 2;
+        text-align: center;
+    }
+    nav a {
+        margin: 0 2px;
+        letter-spacing: .4px;
+        font-family: 'Source Sans Pro', sans-serif;
+        font-size: 1em;
+        display: initial;
+        color: white;
+        text-decoration: none;
+        background-color: #659CEF;
+        border-radius: 5px;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .ratingUtilisateur {
+        width: 10%;
+    }
+    .barreRechercheContenuMobile {
+        display: none;
+    }
+    .boutonRechercheMobile {
+        display: none;
+    }
+    .barreRechercheContenuMobile input[type="submit"] {
+        display: none;
+    }
+    .barreRechercheContenuMobile input[type="text"] {
+        display: none;
+    }
+    .barreRechercheContenuMobile select {
+        display: none;
+    }
+    .barreRechercheContenuMobile input {
+        display: none;
+    }
+    .flecheRechercheMobile {
+        display: none;
+    }
+    .barreRecherche {
+        text-align: center;
+        font-family: 'Source Sans Pro', sans-serif;
+        display: block;
+        float: right;
+        background: #B32A42;
+        width: 200px;
+        height: 100%;
+        position: relative;
+        z-index: 5;
+        border-left: solid 2px #70212F;
+    }
+    .barreRechercheContenu {
+        margin: 6px 0 0 0;
+        display: block;
+    }
+    .barreRechercheContenu input[type="submit"] {
+        background-color: #F5F077;
+    }
+    .barreRechercheContenu input[type="text"] {
+        width: 90.5%;
+        height: 18px;
+    }
+    .barreRechercheContenu select {
+        text-align: center;
+    }
+    .barreRechercheContenu input {
+        height: 22px;
+        width: 92%;
+        font-size: 14px;
+        padding: 0;
+        margin: 0 auto 5px auto;
+    }
+    .barreRechercheContenu select {
+        height: 22px;
+        width: 92%;
+        font-size: 14px;
+        padding: 0;
+        margin: 0 auto 5px auto;
+    }
+    .barreRechercheContenu>select>option {
+        line-height: 20px;
+    }
+    .boutonRecherche {
+        float: right;
+        background: #B32A42;
+        width: 80px;
+        height: 100%;
+        position: relative;
+        z-index: 5;
+        border-left: solid 2px #70212F;
+        display: block;
+    }
+    .iconeRecherche {
+        margin: 0 auto;
+        position: absolute;
+        left: 15px;
+        top: 10%;
+        height: 50px;
+        display: block;
+    }
+    .flecheRecherche {
+        float: right;
+        background: #B32A42;
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: -10px;
+        top: 17px;
+        transform: rotate(45deg);
+        border-bottom-left-radius: 5px;
+        border-left: solid 2px #70212F;
+        border-bottom: solid 2px #70212F;
+    }
+    .dummy {
+        height: 98px;
+    }
+    .section1 {
+        margin-bottom: 20px;
+    }
+    .pubAccueil img {
+        width: 70%;
+        margin-left: 15%;
+    }
+    .boutonsLiens {
+        width: 15%;
+        display: inline-block;
+        background: #B32A42;
+        border-radius: 8px;
+        margin: 20px;
+        font-weight: bold;
+        font-size: 0.8em;
+    }
+    #navMobile {
+        display: none;
+    }
+    #icon_menu {
+        margin-left: 2%;
+        margin-right: 20%;
+    }
+    #logo {
+        display: block;
+        height: 52px;
+        width: 52px;
+        margin: 5px 0 0 7px;
+    }
+    #titre {
+        font-size: 1.8em;
+    }
+    #barreRecherche {
+        top: -98px;
+    }
+    #loupe {
+        float: right;
+        margin-right: 2%;
+    }
+    #lionDesktop {
+        display: none;
+    }
+    #lionMobile {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #boutonAjouterCom {
+        display: block;
+    }
+    #texteAccueil {
+        display: none;
+    }
+    #map {
+        height: 400px !important;
+        margin: 0 auto;
+    }
+    #div_form,
+    #panneauApprobation {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #divPanneauApprobation {
+        min-width: 400px;
+    }
+    #panneauApprobation h2 a:hover {
+        color: #B32A42;
+    }
+    #form_itineraire input[type="button"] {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    #fin {
+        width: 280px;
+    }
+    #formSoumissionConteneur {
+        margin-left: 90px;
+        width: 100%;
+    }
+    #aProposMontreart {
+        display: block;
+    }
+    #texteAccueilTablette {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    #logoMobile {
+        display: none;
+    }
+    .inputGestion {
+        width: 65%;
+        margin-left: 16%;
+    }
+    .selectGestion {
+        width: 68%;
+        margin-left: 16%;
+    }
+    .textAreaGestion {
+        width: 67%;
+    }
+    .fileToUploadGestion {
+        width: 65%;
+        margin-left: 16%;
+    }
+    #boutonAjouterSoumission {
+        margin-left: 44%;
+    }
+    #formLogin,
+    #contribuer_article,
+    #form_profil {
+        max-width: 300px;
+    }
+    .boutonsGestion {
+        margin-left: 42%;
+    }
+    #btnAjoutOeuvre {
+        margin-left: 44%;
+    }
+    #btnSupOeuvre {
+        margin-left: 42%;
+    }
+    #btnModCat {
+        margin-left: 44%;
+    }
+    #btnAjoutCat {
+        margin-left: 44%;
+    }
+    #btnSupCat {
+        margin-left: 42%;
+    }
+    .descriptionAjout {
+        width: 67%;
+    }
+    .inputSoumission {
+        width: 65%;
+    }
+    .selectSoumission {
+        width: 68%;
+    }
+    .televersionTexteSoumission {
+        text-align: center;
+    }
+    .fileToUploadSoumission {
+        width: 65%;
+    }
+    
+    #backgroundOeuvreHead {
+        height: 50%;
+    }
+    
+    #formPhotoUnique input[type="file"] {
+    margin-left: 28%;
+    }
+    
+    #btnSoumettrePhoto {
+    margin-left: 44%;
+    }
+    
+    div.stars {
+    margin-left: 30%;
+    }
+    
+    #commentaireAjout {
+    width: 450px;
+    margin-left: 15%;
+    }
+    
+    #boutonAjouterCom {
+    margin-left: 35%;
+    }
+
+    .descriptionAjoutSoumission {
+    width: 67%;
+    }
+}
+
+
+/*========================================  STYLES POUR TABLETTE 800+ px ====================================================*/
+
+@media (min-width: 620px) {
+    
+    #divPanneauApprobation {
+        min-width: 500px;
+    }
+    .fieldsetRecherche { 
+        display: inline-block;
+        width: 45%;
+        margin: 0 2%;
+        border: 3px solid #70212F;
+        border-radius: 5px;
+        padding-bottom: 3%;
+        padding-top: 1%;
+        margin-top: 5%;
+    }
+    .fieldsetRecherche:hover { 
+    border: 3px solid #B32A42;
+    }
+    
+    .fieldsetRecherche img {
+        width: 94%;
+    }
+}
+
+
+/*========================================  STYLES POUR TABLETTE 800+ px ====================================================*/
+
+@media (min-width: 800px) {
+    html {
+        width: 100%;
+        height: 100%;
+    }
+    body {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+        bottom: 0;
+    }
+    main {
+        width: 60%;
+    }
+    header {
+        background-image: url(../images/banniereVecto.png);
+        background-size: 100% 100%;
+        height: 76px;
+        width: 100%;
+    }
+    nav a {
+        font-size: 1.2em;
+    }
+    h2 {
+        margin-left: 20px;
+        margin-right: 20px;
+        text-align: left;
+    }
+    nav {
+        top: 76px;
+        width: 100%;
+    }
+    footer {
+        width: 100%;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        padding: 0;
+    }
+    .textStandard {
+        font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
+        font-size: 1em;
+        line-height: 1.4em;
+        letter-spacing: .9px;
+        font-weight: 500;
+        margin: 40px 20px;
+    }
+    .dummy {
+        height: 110px;
+    }
+    .sliderOeuvre {
+        width: 60%;
+        margin-top: 36px;
+        height: 400px;
+        overflow: hidden;
+    }
+    .aside1 {
+        width: 30%;
+        height: 300px;
+        float: right;
+        position: relative;
+        left: 0
+    }
+    .aside2 {
+        width: 30%;
+        height: 300px;
+        float: right;
+        position: relative;
+        right: -30%;
+        top: 300px;
+    }
+    .section1 {
+        height: auto;
+        width: 40%;
+        display: block;
+        position: relative;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .section2 {
+        height: 300px;
+        width: 57%;
+        float: left;
+        position: relative;
+        top: -740px;
+        left: 41%;
+        display: block;
+        margin-left: 0;
+    }
+    .oeuvreVedette {
+        width: 49%;
+        position: relative;
+        top: 24px;
+        margin-right: 0;
+    }
+    .oeuvreVedette img {
+        max-width: 390px;
+        margin: 0 auto;
+        margin-left: 5px;
+    }
+    .section4 {
+        height: 300px;
+        width: 59%;
+        float: left;
+        clear: none;
+        position: relative;
+        top: -300px;
+        left: 21.3%;
+    }
+    #promoMobile {
+        display: none;
+    }
+    .pubAccueil img {
+        width: 335px;
+        height: auto;
+        margin: 0 auto;
+    }
+    .infosOeuvre {
+        width: 38%;
+        display: block;
+        position: absolute;
+        top: 155px;
+        right: 0;
+        float: right;
+        border-left: 6px solid #ffffff;
+    }
+    .description {
+        display: block;
+        width: 100%;
+        height: auto;
+        position: relative;
+        top: 210px;
+    }
+    .description h3 {
+        position: relative;
+        left: -190px;
+    }
+    .sectionCommentaires {
+        width: 100%;
+        height: auto;
+        display: block;
+        position: relative;
+        top: 210px;
+    }
+    .description,
+    .sectionCommentaires,
+    #sponsorsPageOeuvre {
+        margin-top: 70px;
+    }
+    .sectionCommentaires h3 {
+        margin-left: 15px;
+    }
+    .flecheRecherche {
+        float: right;
+        background: #B32A42;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: -16px;
+        top: 28px;
+        transform: rotate(45deg);
+        border-bottom-left-radius: 5px;
+        border-left: solid 2px #70212F;
+        border-bottom: solid 2px #70212F;
+    }
+    .iconeRecherche {
+        top: 23%;
+    }
+
+    #titre {
+        left: 100px;
+        font-weight: 900;
+    }
+    #logo {
+        width: 60px;
+        height: 60px;
+    }
+    #recherche {
+        width: 40%;
+        position: fixed;
+        top: 0px;
+        right: 55px;
+        background: #00acc2;
+        z-index: 4;
+    }
+    #loupe {
+        margin: 10px;
+    }
+    #itineraire {
+        width: 100%;
+    }
+    #sponsorsTrajet {
+        width: 30%;
+        height: 300px;
+        margin-left: 20px;
+        margin-top: 50px;
+        border: 2px solid #47ce51;
+    }
+    #btnContribuerPhoto {
+        float: left;
+        clear: none;
+    }
+    #formContribuerPhoto {
+        display: block;
+        width: 60%;
+    }
+    #sponsorsPageOeuvre {
+        display: block;
+        width: 100%;
+        height: 200px;
+        ;
+        position: relative;
+        top: 210px;
+    }
+
+    #texteAccueil {
+        margin-left: 80px;
+    }
+    #directions-panel {
+        width: 100%;
+        height: auto;
+        text-align: center;
+    }
+    .reseauxsociaux {
+        margin-top: 0;
+    }
+    #fin {
+        width: 558px;
+    }
+    .inputGestion {
+        width: 65%;
+    }
+    .selectGestion {
+        width: 100%;
+    }
+    .fileToUploadGestion {
+        width: 65%;
+    }
+    .textAreaGestion {
+        width: 67%;
+    }
+    #boutonAjouterSoumission {
+        margin-left: 75%;
+    }
+    .noIndent {
+        margin-left: 40%;
+        width: 80%;
+    }
+    #ContribuezAMontreart {
+        margin-left: 70%;
+        text-align: center;
+    }
+    .h2PageGestion {
+        text-align: center;
+    }
+    .boutonsGestion {
+        margin-left: 43%;
+    }
+    #btnAjoutOeuvre {
+        margin-left: 46%;
+    }
+    #btnSupOeuvre {
+        margin-left: 43%;
+    }
+    #btnModCat {
+        margin-left: 43%;
+    }
+    #btnAjoutCat {
+        margin-left: 43%;
+    }
+    #btnSupCat {
+        margin-left: 43%;
+    }
+
+    .inputSoumission {
+        margin-left: 30%;
+        width: 103%;
+    }
+    .selectSoumission {
+        margin-left: 30%;
+        width: 104%;
+    }
+    .televersionTexteSoumission {
+        text-align: center;
+    }
+    .fileToUploadSoumission {
+        margin-left: 30%;
+        width: 100%;
+    }
+    .televersionTexteSoumission {
+        margin-left: 63%;
+    }
+    #backgroundOeuvreHead {
+        height: 620px;
+    }
+    
+    #descriptionTitreOeuvre {
+    margin-left: 25%;
+    text-align: left;
+    }
+    
+    #texteDescriptionOeuvre {
+    margin-left: 18%;
+    text-align: left;
+    }
+    
+    #formPhotoUnique input[type="file"] {
+    margin-left: 34%;
+    }
+    
+    div.stars {
+    margin-left: 33%;
+    }
+    
+    #commentaireAjout {
+    width: 50%;
+    height: 150px;
+    margin-left: 25%;
+    }
+    
+    #boutonAjouterCom {
+    margin-left: 38%;
+    }
+    
+    .descriptionAjoutSoumission {
+    width: 106%;
+    }
+    
+    .oeuvreVedette img {
+        margin-left: 10px;
+    }
+    
+    .pubAccueil {
+    height: auto;
+    width: 40%;
+    float: right;
+    position: absolute;
+    top: 68%;
+    left: 50%;
+    margin-left: 3%;
+    }
+    
+    #promoDesktop {
+    display: block;
+    }
+    
+    #aucunCommP {
+    margin-left: 5%;
+    }
+
+    
+    .oeuvreVedette img {
+        margin-left: 5px;
+    }
+    
+    #descriptionAjoutSoumission {
+    width: 106%;
+    }
+    
+    .oeuvreVedette img {
+        margin-left: 45px;
+    }
+    
+    /*------------- PAGE ADMIN 800px ET+ -----------------------*/
+    .premiereColonne {
+        width: 58%;
+        height: 500px;
+        border-right: 4px solid #F8F274;
+    }
+    .deuxiemmeColonne {
+        float: left;
+        clear: none;
+        position: relative;
+        top: -500px;
+        right: -59%;
+        width: 20%;
+        height: 500px;
+        overflow-y: scroll;
+    }
+    .troisiemmeColonne {
+        float: left;
+        clear: none;
+        position: relative;
+        top: -500px;
+        right: -60%;
+        width: 20%;
+        height: 500px;
+        overflow-y: scroll;
+    }
+    .listeCommentaires {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .listeOeuvres {
+        width: 100%;
+        overflow-y: scroll;
+    }
+    .boutonsLiens {
+        width: 15%;
+        display: inline-block;
+        background: #B32A42;
+        border-radius: 8px;
+        margin: 20px;
+        font-weight: bold;
+        font-size: 1.2em;
+    }
+    #lionDesktop {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #lionMobile {
+        display: none;
+    }
+    .selectGestion {
+        width: 67%;
+    }
+    
+    
+}
+
+
+/*-------------FIN PAGE ADMIN ---------------------*/
+
+
+/*======================================== FIN DU STYLES POUR TABLETTE ====================================================*/
+
+
+/*========================================  STYLES POUR DESKTOP ====================================================*/
+
+@media (min-width: 1024px) {
+    html {
+        width: 980px;
+        margin: 0 auto;
+    }
+    body {
+        width: 100%;
+    }
+    header {
+        width: 980px;
+        margin: 0 auto;
+        height: 86px;
+    }
+    #results .item {
+        padding: 3px;
+        font-size: 14px;
+        border-bottom: 1px solid white;
+    }
+    nav {
+        width: 980px;
+        top: 86px;
+    }
+    
+    footer {
+        margin-bottom: 30px;
+    }
+
+    .dummy {
+        height: 130px;
+    }
+    .textStandard,
+    h2 {
+        max-width: 800px;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .infosOeuvre {
+    top: 166px;
+    height: 620px;
+    }
+    .description {
+        top: 100px;
+    }
+    .boutonsLiens {
+        width: 15%;
+        display: inline-block;
+        background: #B32A42;
+        border-radius: 8px;
+        margin: 20px;
+        font-weight: bold;
+    }
+    #logo {
+        width: 76px;
+        height: 76px;
+    }
+    #titre {
+        top: -70px;
+        font-size: 3em;
+    }
+    #barreRecherche {
+        top: -140px;
+    }
+    #map {
+        height: 400px !important;
+        margin: 0 auto;
+    }
+    #lionDesktop {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    #lionMobile {
+        display: none;
+    }
+    .pubAccueil img {
+        width: 360px;
+    }
+    #fin {
+        width: 670px;
+    }
+    .h2PageGestion {
+        text-align: center;
+        max-width: 100%;
+    }
+    .selectGestion {
+        width: 67%;
+    }
+    #btnAjoutOeuvre {
+        margin-left: 46%;
+    }
+    #btnSupOeuvre {
+        margin-left: 45%;
+    }
+    #btnModCat {
+        margin-left: 46%;
+    }
+    #btnAjoutCat {
+        margin-left: 46%;
+    }
+    #btnSupCat {
+        margin-left: 44%;
+    }
+    
+    .inputSoumission {
+        width: 103%;
+    }
+
+    .descriptionAjoutSoumission {
+    width: 106%;
+    }
+    
+    #formPhotoUnique input[type="file"] {
+    margin-left: 36%;
+    }
+    
+    #btnSoumettrePhoto {
+    margin-left: 44%;
+    }
+    
+    #commentaireAjout {
+    width: 450px;
+    margin-left: 27%;
+    }
+    
+    .pubAccueil {
+        height: auto;
+      width: 40%;
+      float: right;
+      position: absolute;
+      top: 69%;
+    }
+    
+    .oeuvreVedette img {
+    margin-left: 45px;
+    }
+    
+    #aucunCommP {
+    margin-left: 10%;
+    }
+    
+    div.stars {
+    margin-left: 36%;
+    }
+    
+    #boutonAjouterCom {
+    margin-left: 40%;
+    }
+
+/*------------ Classes générés dynamiquement sur chaque résultat de recherche----------------*/
+    
+
+    .fieldsetRecherche { 
+        display: inline-block;
+        width: 30%;
+        margin: 0 1%;
+        border: 3px solid #70212F;
+        border-radius: 5px;
+        padding-bottom: 3%;
+        padding-top: 1%;
+        margin-top: 5%;
+    }
+    
+    .fieldsetRecherche img {
+        width: 94%;
+    }
+
+/*------------ Fin des classes générés dynamiquement sur chaque résultat de recherche----------------*/
+    
+}
+
+
+/*========================================FIN DU STYLES POUR DESKTOP ====================================================*/
