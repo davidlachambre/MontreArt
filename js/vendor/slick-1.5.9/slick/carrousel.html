@@ -1,0 +1,63 @@
+
+<html>
+  <head>
+  <title>My Now Amazing Webpage</title>
+  <link rel="stylesheet" type="text/css" href="slick.css"/>
+  <link rel="stylesheet" type="text/css" href="slick-theme.css"/>
+
+  </head>
+  <style>
+  body{
+    background: red;
+  }
+  </style>
+  <body>
+
+  <div class="your-class">
+    <div>your content</div>
+    <div>your content</div>
+    <div>your content</div>
+  </div>
+      
+    </div>
+  <div class="single-item">
+       <div index="0"> <a href="tvshow.php?show=thebigbangtheory"><img src="http://artpublicmontreal.ca/wp-content/uploads/imported/1099_5287.jpg"  height="170px" alt="The Big Bang Theory" style="margin:5px" align="left"></a></div>
+
+   
+    <div index="1"><img src="http://artpublicmontreal.ca/wp-content/uploads/imported/1099_5287.jpg"  height="170px" alt="The Big Bang Theory" style="margin:5px" align="left"></div>
+    <div index="2"><img src="http://artpublicmontreal.ca/wp-content/uploads/imported/1099_5287.jpg"  height="170px" alt="The Big Bang Theory" style="margin:5px" align="left"></div>
+  </div>
+  <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}'>
+  <div><h3>1</h3></div>
+  <div><h3>2</h3></div>
+  <div><h3>3</h3></div>
+  <div><h3>4</h3></div>
+  <div><h3>5</h3></div>
+  <div><h3>6</h3></div>
+</div>
+
+ <script type="text/javascript" src="http//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="http//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="slick.min.js"></script>
+
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      $('.your-class').slick({
+        setting-name: setting-value
+      });
+    });
+$('.single-item').slick();
+       $('.data-slick').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  centerMode: true,
+  variableWidth: true
+});
+  </script>
+
+  </body>
+</html>
+        
