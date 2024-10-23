@@ -58,7 +58,7 @@ class VueTrajet extends Vue {
                 </div>
 
          <div id="map">
-               <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBX7W9IA4ew3pHEhUYUId7DYSRaVaUrDJM&signed_in=true&callback=initMapTrajet"></script>
+               <script async defer src="https://maps.googleapis.com/maps/api/js?key=&signed_in=true&callback=initMapTrajet"></script>
                  
         </div>
         
